@@ -3,6 +3,7 @@
 
 <head>
     <title>IT Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,6 +19,8 @@
 
             <a href="#contact">Contact</a>
         </ul>
+        <button onclick="lightmode()" id="themelight"> <i class="fa-regular fa-moon"></i>
+            Light Mode</button>
         <button> <i class="fa-solid fa-phone"></i>Contact Me</button>
     </nav>
 
@@ -36,7 +39,7 @@
                 improving my knowledge.
                 My goal is to become a skilled web developer and build modern, user-friendly websites.
             </p>
-            <button id="ContactMe" >
+            <button id="ContactMe">
                 Contact Me
             </button>
         </div>
@@ -82,7 +85,7 @@
                 <a>
                     <img src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png" alt="github">
                 </a>
-                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" alt="linkedin">
+                <a href=""> <img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" alt="linkedin"></a>
                 <a href="https://www.instagram.com/karan_pawar___07?igsh=MWx0aDJoODkzenJqOQ==">
 
                     <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="instagram">
@@ -221,8 +224,6 @@
 
             </div>
 
-
-
         </div>
 
     </div>
@@ -240,6 +241,16 @@
             backDelay: 1500,
             loop: true
         });
+
+        // const themelight = document.getElementById("themelight");
+
+        function lightmode() {
+            document.body.classList.toggle("light-mode");
+
+
+        }
+
+
     </script>
 
 

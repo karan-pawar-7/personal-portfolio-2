@@ -5,16 +5,86 @@
     scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.65);
-    z-index:-1;
+
+.light-mode nav {
+    background: #fffefe;
+    color: black;
 }
+
+.light-mode #home {
+    background: #fcfafa;
+    color: rgb(11, 10, 10);
+    transition: 2s;
+}
+
+.light-mode #about {
+    background: #fbfbfb;
+    color: rgb(8, 8, 8);
+    transition: 2s;
+
+}
+
+.light-mode #services {
+    background: #ffffff;
+    color: rgb(15, 15, 15);
+    transition: 2s;
+
+}
+
+.light-mode #contact {
+    background: #ffffff;
+    color: rgb(14, 13, 13);
+    transition: 2s;
+
+}
+.light-mode #pawar{
+    color: black;
+}
+.light-mode h2{
+    color: black;
+}
+.light-mode a{
+    color: black;
+}
+.light-mode .s-box h2{
+    color: black;
+}
+.light-mode .s-box p{
+    color: black;
+}
+.light-mode .s-box {
+    background-color: #bdbdbd;
+}
+.light-mode #contact-head-p{
+    color: black;
+}
+.light-mode .left-head h2{
+    color: black;
+}
+.light-mode .left-head p{
+    color: black;
+}
+.light-mode #contact h3{
+    color: black;
+}
+.light-mode #contact p{
+    color: black;
+}
+.light-mode ::placeholder{
+    color: black;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #f7eaf5;
@@ -41,6 +111,15 @@ nav {
     /* background-image: url(https://i.pinimg.com/1200x/0a/d9/24/0ad924de82d42969b087654bc7b17711.jpg); */
 }
 
+
+
+.social-icons a img{
+    height: 100%;
+    max-height: 30px;
+    margin: 10px;
+    background-color: #facc15;
+    border-radius: 20px;
+}
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -50,15 +129,15 @@ nav {
 
 .logo img {
     padding-top: 10px;
-    width: 180px;
-    height: 120px;
+    width: 150px;
+    height: 100px;
     display: block;
 }
 
 ul {
     display: flex;
     list-style: none;
-    gap: 55px;
+    gap: 50px;
     margin-left: 500px;
 
 }
@@ -68,9 +147,10 @@ ul a {
     color: white;
     font-size: 18px;
     transition: all;
-    transition-duration: 1s; 
+    transition-duration: 1s;
     transform-style: preserve-3d;
 }
+
 ul a:hover {
     color: #f9b703;
     border-bottom: 3px solid #f9b703;
@@ -81,7 +161,7 @@ nav button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     padding: 12px 5px;
     margin-right: 30px;
     background: #f4b400;
@@ -131,7 +211,7 @@ p {
 
 #karanpawar {
     font-size: 100px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #f9b703;
 }
 
@@ -283,6 +363,9 @@ button {
 
 #kp {
     font-size: 20px;
+}
+a{
+    color: #f5c647;
 }
 
 
@@ -531,8 +614,228 @@ textarea::placeholder {
     color: #f7f6f3;
     font-size: 15px;
 }
+
 .contact-left i:hover {
     color: #f7f6f3;
     transition: all;
     transition-duration: .5s;
+}
+
+
+
+
+/* ===========================
+   MOBILE RESPONSIVE (768px)
+=========================== */
+
+@media (max-width:768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+        width: 100%;
+        height: 70px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 90px;
+        height: auto;
+    }
+
+    ul {
+        display: none;
+    }
+
+    nav button {
+        margin: 0;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    /* ================= HOME ================= */
+
+    #home {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .left-div {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-div h1 {
+        font-size: 30px;
+    }
+
+    #pawar {
+        font-size: 38px;
+    }
+
+    #karanpawar {
+        font-size: 42px;
+    }
+
+    span {
+        font-size: 28px;
+    }
+
+    #typing {
+        font-size: 22px;
+    }
+
+    .left-div p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .right-div {
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-div img {
+        width: 280px;
+        height: auto;
+    }
+
+    /* ================= ABOUT ================= */
+
+    #about {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 60px 20px;
+    }
+
+    .circle-border {
+        width: 100%;
+        height: auto;
+        background: none;
+    }
+
+    .circle-border img,
+    .left img {
+        width: 280px;
+        height: auto;
+        margin: 0;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right h1 {
+        font-size: 40px;
+    }
+
+    .right span {
+        font-size: 40px;
+    }
+
+    .right p {
+        font-size: 16px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    #services {
+        width: 100%;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .s-head h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .services-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+        gap: 20px;
+    }
+
+    .s-box {
+        width: 100%;
+    }
+
+    /* ================= CONTACT ================= */
+
+    #contact {
+        width: 100%;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .contact-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .right-head {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-head input {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .contact-right button {
+        width: 100%;
+    }
+
 }
